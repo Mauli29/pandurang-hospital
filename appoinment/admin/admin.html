@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Pandurang Hospital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/appoinment/admin/style.css">
+</head>
+<body>
+
+  <!-- Login Section -->
+  <div id="loginSection" class="login-container">
+    <div class="login-card">
+      <h2 style="color: var(--primary-color); margin-top: 0;">
+        <i class="fa-solid fa-user-shield"></i> Admin Login
+      </h2>
+      <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">Enter credentials to access dashboard</p>
+      
+      <input type="text" id="adminId" placeholder="User ID" class="login-input">
+      <input type="password" id="adminPass" placeholder="Password" class="login-input">
+      
+      <p id="loginError" style="color: red; display: none; font-size: 0.85rem; margin: 5px 0;">Incorrect ID or Password!</p>
+      
+      <button class="btn login-btn" onclick="checkLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- Dashboard Section (सुरुवातीला लपवलेले असेल) -->
+  <div id="dashboardSection" style="display: none;">
+    
+    <div class="header">
+      <h2><i class="fa-solid fa-hospital-user"></i> Admin Dashboard</h2>
+      <div class="controls">
+        <span style="font-size: 0.9rem;">Filter by Date:</span>
+        <input type="date" id="filterDate" class="date-input" onchange="applyFilter()">
+        
+        <button class="btn btn-clear" onclick="clearFilter()" title="Clear Filter">
+          <i class="fa-solid fa-xmark"></i> Clear
+        </button>
+        <button class="btn" onclick="fetchAppointments()">
+          <i class="fa-solid fa-rotate-right"></i> Refresh
+        </button>
+        <button class="btn btn-clear" onclick="logout()" title="Logout">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3 style="margin: 0; color: #333;"><i class="fa-solid fa-list"></i> Appointments List</h3>
+          <span id="recordCount" style="color: #666; font-size: 0.9rem; font-weight: bold;">Loading...</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Patient Name</th>
+              <th>Phone Number</th>
+              <th>Department</th>
+              <th>Appointment Date</th>
+              <th>Symptoms / Reason</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Data will load here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/appoinment/admin/script.js"></script>
+</body>
+</html>

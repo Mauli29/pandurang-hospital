@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Pandurang Superspeciality Hospital</title>
+  <link rel="stylesheet" href="/appoinment/style.css">
+    <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div><i class="fa-solid fa-location-dot"></i> Parbhani, Maharashtra</div>
+      <div class="top-bar-right">
+        <span class="emergency-text"><i class="fa-solid fa-truck-medical"></i> 24/7 Emergency: +91 XXXXXXXXXX</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-name">Pandurang</span>
+        <span class="brand-sub">Superspeci ality Hospital</span>
+      </a>
+      
+      <button class="menu-btn" id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#index">Home</a></li>
+        <li><a href="/#about">About Us</a></li>
+        <li><a href="/#services.html">Specialties</a></li>
+        <li><a href="/#contact.html">Contact</a></li>
+        <li><a href="/#appointment.html" class="btn btn-primary active" style="color: white;">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="hero" style="padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <h1>Book an <span>Appointment</span></h1>
+      <p style="margin: 0 auto;">Schedule your visit with our expert medical professionals quickly and easily.</p>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section class="container" style="padding: 4rem 1.5rem;">
+    <div class="appointment-grid">
+      
+    <!-- Left: Appointment Form -->
+      <div class="appointment-form-card">
+        <form id="appointmentForm">
+          
+          <h2 style="color: var(--dark-blue); margin-bottom: 2rem;">Patient Details</h2>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+91 XXXXXXXXXX" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="department">Select Specialty *</label>
+              <select id="department" class="form-control" required>
+                <option value="" disabled selected>Choose a department...</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Nephrology">Nephrology</option>
+                <option value="Pulmonology">Pulmonology</option>
+                <option value="Gastroenterology">Gastroenterology</option>
+                <option value="Maternity">Maternity Services</option>
+                <option value="General">General Medicine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="symptoms">Briefly describe your symptoms/reason for visit</label>
+            <textarea id="symptoms" class="form-control" placeholder="Please write a few words about your condition..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 0.8rem;">
+            Submit Request <i class="fa-solid fa-calendar-check"></i>
+          </button>
+          
+          <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+            * In case of a medical emergency, please do not use this form. Call our emergency helpline directly.
+          </p>
+        </form>
+      </div>
+
+      <!-- Right: Contact & Scheme Info -->
+      <div>
+        <div class="info-card">
+          <h3>Need Immediate Help?</h3>
+          <ul class="info-list">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong style="display: block; font-size: 1.1rem;">Emergency Helpline</strong>
+                <span>+91 XXXXXXXXXX (24/7)</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong style="display: block; font-size: 1.1rem;">Email Us</strong>
+                <span>appointments@pandurang.com</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong style="display: block; font-size: 1.1rem;">OPD Timings</strong>
+                <span>Mon - Sat: 9:00 AM - 8:00 PM<br>Sun: Emergency Only</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PM-JAY Callout -->
+        <div style="background-color: #fef3c7; border: 1px solid #fde68a; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+          <i class="fa-solid fa-shield-heart" style="color: var(--pmjay-gold); font-size: 2rem;"></i>
+          <div>
+            <h4 style="color: var(--pmjay-gold); margin-bottom: 0.5rem; font-size: 1.1rem;">PM-JAY Beneficiaries</h4>
+            <p style="font-size: 0.9rem; color: #92400e;">We provide free or subsidized treatments to eligible patients under the Ayushman Bharat scheme. Please carry your PM-JAY card during your visit.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Pandurang Superspeciality Hospital, Parbhani. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/script.js"></script>
+  <script src="/appoinment/script.js"></script>
+</body>
+</html>>
